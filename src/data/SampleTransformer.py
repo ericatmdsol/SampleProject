@@ -1,6 +1,6 @@
 from sklearn.base import TransformerMixin
 import numpy as np
-
+import pandas as pd
 
 class SampleTransformer(TransformerMixin):
     """ Centers the mean of all given columns to be 0
@@ -10,14 +10,16 @@ class SampleTransformer(TransformerMixin):
     def __init__(self, *args, **kwargs):
         self.means = None
     
-    def fit(self, X: np.array):
+    def fit(self, X: pd.DataFrame):
+        self.columns = X.columns
         self.means = X.mean(axis=0)
+        return self
     
-    def transform(self, X):
+    def transform(self, X: pd.DataFrame):
         return X - self.means
 
-    def fit_transform(self, X, y=None):
+    def fit_transform(self, X: pd.DataFrame, y=None):
         self.fit(X)
-        self.transform(X)
+        return self.transform(X)
 
 
