@@ -10,7 +10,7 @@ In projects, updates (not code runs) generally happen in discrete buckets:
 2. Modeling
 3. Output  
 
-Because of this we don't want to mix the code. This allows us to revert individual files to a certain commit, rather than figuring out what has to be reverted in each individual file. It also makes testing your code in discrete units a bit simpler. NOTE: OS X -> Linux has an issue with this only because when we use an explicit 
+Because of this we don't want to mix the code. This allows us to revert individual files to a certain commit, rather than figuring out what has to be reverted in each individual file. It also makes testing your code in discrete units a bit simpler. NOTE: OS X -> Linux has an issue with this only because when we use explicit, it gets the specific package and that's architecture specific. 
 
 I prefer using the spec-file vs. the requirements file because in DS projects, it's easier to create a conda env from it:
 
