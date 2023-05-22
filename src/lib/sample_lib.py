@@ -11,4 +11,5 @@ def add_two_numbers(a: int, b: int)->int:
     return a + b
 
 def lets_create_another_function():
+    # something new
     pass
