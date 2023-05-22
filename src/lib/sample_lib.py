@@ -9,3 +9,6 @@ def add_two_numbers(a: int, b: int)->int:
         int: the sum
     """    
     return a + b
+
+def lets_create_another_function():
+    pass
